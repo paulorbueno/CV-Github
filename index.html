@@ -9,13 +9,13 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #afd0f1;
+            background-color: #84acf2;
             color: #333;
         }
         .container {
             width: 50%;
             margin: 20px auto;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -80,12 +80,41 @@
         .references p {
             margin: 0;
         }
+        .print-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2980b9;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media print {
+            body, .container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                background: none;
+            }
+            .print-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>PAULO ROBERTO BUENO</h1>
         <h2 style="text-align: center;">BUSINESS ANALYST</h2>
+        <h2>Contact Info</h2>
+        <p>+352661375189</p>
+        <p>paulrbueno@gmail.com</p>
+        <p>linkedin.com/in/prbueno/</p>
+        <p>Bertrange, Luxembourg</p>
         <h2>Profile</h2>
         <p style="text-align: justify;">Skilled and dynamic BA with great interpersonal and communication abilities, brings along many years of experience tailoring solutions alongside stakeholders and clients specially on Healthcare area, driving project operational efficiency, strategic transformation and optimisation across multiple industries. Holds expertise in multitasking and prioritisation as well as a proven track record of reducing costs by implementing transformative and automated processes as well as applying critical thinking strategies. Expert in ERP systems, financial analysis and cross-functional leadership in industries from manufacturing to SaaS.</p>
         
@@ -178,12 +207,6 @@
             </ul>
         </div>
         
-        <h2>Contact Info</h2>
-        <p>+352661375189</p>
-        <p>paulrbueno@gmail.com</p>
-        <p>linkedin.com/in/prbueno/</p>
-        <p>Bertrange, Luxembourg</p>
-        
         <div class="languages section">
             <h2 class="section-title">Languages</h2>
             <ul>
@@ -210,6 +233,7 @@
             <h2 class="section-title">References</h2>
             <p>References are available upon request</p>
         </div>
+        <button class="print-button" onclick="window.print()">Print</button>
     </div>
 </body>
 </html>
